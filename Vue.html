@@ -1,0 +1,81 @@
+<html>
+<head>
+  <title>Рассчёт скидки</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<link rel="stylesheet" href="style.css">
+<script language="JavaScript" type="text/javascript" src="jquery-3.6.1.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="script.js"></script>
+</head>
+
+<body style="color: white;" OnLoad="Stil();Color_Img();">
+  <a href="Index.html"><h2>Назад</h2></a>
+  <div id="app">
+</div>
+
+<center>
+  <div id="app2">
+    <p v-bind:class="stylecss">Цена: {{ stylecss }}</p>
+    <p>Выгода Вашей скидки</p>
+    <input type="text" v-on:input="totalcost(stylecss = $event.target.value)">
+    <p>Обычная цена: {{ value }} ₽</p>
+    <p>Цена со скидкой за двоих: {{ tcost }} ₽</p>
+    <p>Цена со скидкой за троих: {{ tcost2 }} ₽</p>
+   </div>
+</center>
+
+<div id="app4">
+    <p>Популярные предложения: </p>
+    <ul>
+      <li v-for="prices in price">{{ prices.vid }}{{ prices.cost }}</li>
+    </ul>
+  </div>
+
+
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      title: '?',
+      info: '?',
+      stylecss: '',
+    },
+    methods: {
+      changeText () {
+        (this).title = '?'
+      }
+    }
+  });
+
+  var app2 = new Vue({
+    el: '#app2',
+    data: {
+      value: 0,
+      tcost: 0,
+      tcost2: 0,
+    },
+    methods: {
+      totalcost(value){
+        this.value = value
+        this.tcost = value * 0.80
+        this.tcost2 = value * 0.70
+      }
+    }
+  })
+  
+
+  var app4 = new Vue({
+      el: '#app4',
+      data: {
+      price: [
+        {vid:"Безлимитный абонемент на 12 месяцев - 7990р"},
+        {vid:"Годовой абонемент + 10 персональных тренировок - 14990р"},
+        {vid:"Безлиминтый абонемент для школьников и студентов на год - 9900р "}
+      ]},
+    })
+</script>
+</body>
+</html>

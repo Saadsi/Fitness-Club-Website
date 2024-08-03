@@ -1,0 +1,57 @@
+input
+{
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: #323233;
+    color: white;
+    height: 50px;
+}
+input::placeholder
+{
+    color: white;
+}
+h1
+{
+    color: white;
+    margin-top: 300px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 300px;
+}
+.name
+{
+    text-align: left;
+    margin-left: 300px;
+}
+.surname
+{
+    text-align: left;
+    margin-left: 300px;
+}
+.phone
+{
+    text-align: right;
+    margin-top: -50px;
+    margin-right: 600px;
+}
+.time
+{
+    text-align: left;
+    margin-left: 300px;
+    margin-top: 50px;
+}
+.payment 
+{
+    text-align: right;
+    margin-right: 200px;
+    margin-top: -70px;
+}
+h2{
+    color: white;
+}
+select
+{
+    text-align: center;
+    margin-right: 100px;
+}

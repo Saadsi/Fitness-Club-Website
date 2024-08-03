@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Расписание тренировок</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td:first-child,
+        th:first-child {
+            padding-left: 20px; /* Отступ для первого столбца */
+        }
+        td:last-child,
+        th:last-child {
+            padding-right: 20px; /* Отступ для последнего столбца */
+        }
+        #toggle-button {
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function loadWorkoutTable() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    var tableHTML = '<table id="workout-table">';
+                    tableHTML += '<tr><th>Workout ID</th><th>Trainer ID</th><th>Workout Name</th><th>Start Time</th><th>End Time</th><th>Max Participants</th><th>Current Participants</th></tr>';
+                    for (var i = 0; i < response.length; i++) {
+                        tableHTML += '<tr>';
+                        tableHTML += '<td>' + response[i].Workout_id + '</td>';
+                        tableHTML += '<td>' + response[i].Trainer_id + '</td>';
+                        tableHTML += '<td>' + response[i].Workout_name + '</td>';
+                        tableHTML += '<td>' + response[i].Workout_start + '</td>';
+                        tableHTML += '<td>' + response[i].Workout_end + '</td>';
+                        tableHTML += '<td>' + response[i].max_num_of_participants + '</td>';
+                        tableHTML += '<td>' + response[i].current_num_of_participants + '</td>';
+                        tableHTML += '</tr>';
+                    }
+                    tableHTML += '</table>';
+                    document.getElementById('workout-table-container').innerHTML = tableHTML;
+                }
+            };
+            xhr.open('GET', 'get_workouts.php', true);
+            xhr.send();
+        }
+
+        function toggleTable() {
+            var table = document.getElementById('workout-table');
+            table.style.display = (table.style.display === 'none') ? 'table' : 'none';
+        }
+    </script>
+</head>
+<body>
+
+<button onclick="toggleTable()">Свернуть/Развернуть таблицу</button>
+<div id="workout-table-container"></div>
+
+<script>
+    window.onload = loadWorkoutTable;
+</script>
+</body>
+</html>

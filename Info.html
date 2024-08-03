@@ -1,0 +1,77 @@
+<html>
+    <script>
+        var str2 = "Абонемент.html"; 
+        function abon(obj) 
+        {  	 var surname = obj.surname.value;  	var name = obj.name.value;  var phone = obj.phone.value; var cash = obj.cash.value; var time = obj.time.value; 
+             var str = phn.value;
+            if(str.length > 11)
+            {
+                alert("Неверный формат номера");
+            }
+        else
+        {
+        var NewWindow = window.open("", "NewWindow", width="500", height="500"); 
+ 
+ 	    NewWindow.document.writeln("<div><b>Поздравляем, " +name+ "! Вы успешно приобрели абонемент в тренажерный зал CrossFit!</b>"); 
+        NewWindow.document.writeln("<div><b>Получить карту вы сможете</b>"+time+"</b>"); 
+        NewWindow.document.writeln("<div><b>Оплата: "+cash+"</b>");
+ 	    NewWindow.document.writeln("<div><b>Ждём вас в зале!</b>"); 
+        }
+        }  
+    </script>
+    <head>
+        <title>Оформление абонемента</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style1.css">
+    </head>
+    <body bgcolor="#323233">
+        <center>
+        <form name="form1">
+        <form name ="card" method="post" action="card.php">
+        <h1>Купить карту</h1>
+        <div class="name">
+        <input type="text" name="name" size="30" placeholder="Имя*"></input>
+        </div>
+        <div class="surname">
+        <input type="text" name="surname" size="30" placeholder="Фамилия*"></input>
+        </div>
+        <div class="phone">
+        <input type="text" name="phone" id="phn" size="30" placeholder="Телефон*" ></input>
+        </div>
+        <div class="payment">
+        <h2>Выберите способ оплаты*</h2>
+        <select name="cash" >
+            <option value=" Картой">Картой</option>
+            <option value="наличными">наличными</option>
+        </select>
+        </div>
+        <div class="time">
+            <h2>В какое время вам удобнее получить карту</h2>
+            <select name="time">
+                <option value=" с 9:00 до 15:00">с 9:00 до 15:00</option>
+                <option value=" с 15:00 до 21:00">с 15:00 до 21:00</option>
+            </select>
+        </div>
+    
+        <div class="time">
+            <h2><p>Способ доставки</p>
+            <p><input type="checkbox" name="courier" value="yes">Курьером</p>
+            <p><input type="checkbox" name="pickup" value="yes">Самовывоз из клуба</p></h2>
+        </div>
+
+        <div>
+            <h2><p>Адрес доставки</p></h2>
+            <textarea style="font-size: 18px;" name="adress"></textarea>
+        </div>
+    
+        <div>
+            <h2>Действия</h2>
+            <button onclick="abon(form1);verify()">Оформить</button>
+            <button type="reset">Очистить</button>
+        </div>
+        </form>
+        <button onClick="history.go(-2)" href="javascript:void(0)" style="background-color: #ffff; border: 2px solid black; border-radius: 7px;  padding: 5px; color: rgb(0, 0, 0); text-align: center; text-decoration: none; font-size: 15px; margin: 4px 2px;">На главную</button> 
+        </center>
+    </form>
+    </body>
+</html>

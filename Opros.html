@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Опрос</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-3.6.3.min.js"></script>
+	<script type="text/javascript" src="event.js"></script>
+    <script>
+        function addPhisicalTrain()
+        {
+	        var pl=$("#phisical").val();
+	        $("#phis").append("<li>"+pl);
+        }
+
+    </script>
+</head>
+
+<body bgcolor="#323233" style="overflow-x: hidden; color: white;">
+	<div>
+		<div>Дополните список, написав, каким видом тренировок вы бы хотели заниматься чаще:</div>
+		<ul id="phis">
+			<li>Body&Mind тренировки</li>
+			<li>Атлетические упражнения</li>
+			<li>Групповые тренировки</li>
+		</ul>
+	</div>
+    <div>Форма ввода:</div>
+		<input type="text" id="phisical" size="25" maxlength="50">
+		<button onclick="addPhisicalTrain()">Добавить</button>
+	</div>
+
+	<div>

@@ -1,0 +1,223 @@
+<html>
+    <head>
+        <title>Цена</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="jquery-3.6.3.min.js"></script>
+        <script type="text/javascript" src="jQueryRotate.js"></script>
+	    <script type="text/javascript" src="table.js"></script>
+        <script>
+        function slideTable()
+            {
+                $("#table").slideToggle(7000);
+            }
+        function snim()
+            {
+                var angle = 0;
+                setInterval(function(){
+                angle -= 3;
+                jQuery("#rotate3").rotate(angle);
+                }, 60);   
+            }  
+            </script>
+    </head>
+    <body bgcolor="#323233" onload="anim()">
+        <h2  style="text-align: right;">
+            <a href="Index.html" style="color: white;">На главную</a>&nbsp;
+            <a href="Contacts.html" style="color: white; margin-right: 10px;">Контакты</a>&nbsp;
+            <a href="About us.html" style="color: white;">О нас</a>
+         </h2>
+        <center>
+        <div id="table">
+        <table style="color: white; border-color: white; border-width: 4px; text-align: center; " border="4" cellpadding="4" cellspacing="0">
+            <tr>
+                <td><img src="iamges/Logo_1.png" id="rotate3"></td>
+                <td>Срок действия</td>
+                <td>Тренажерный зал до 14 часов</td>
+                <td>Тренажерный зал на ВЕСЬ ДЕНЬ</td>
+                <td>Зал групповых программ</td>
+                <td>Тренажерный зал + групповые</td>
+            </tr>
+            <tr>
+                <td>Одно посещение</td>
+                <td style="background-color: grey;"></td>
+                <td>300р</td>
+                <td>400р</td>
+                <td>300р</td>
+                <td style="background-color: grey"></td>
+            </tr>
+            <tr>
+                <td>Школьники/студенты</td>
+                <td style="background-color: grey;"></td>
+                <td>200р</td>
+                <td>300р</td>
+                <td>300р</td>
+                <td style="background-color: grey;"></td>
+            </tr>
+            <tr><td colspan="6"><h2 style="color: white;">АБОНЕМЕНТЫ</h2></td></tr>
+            <tr>
+                <td>8 посещений</td>
+                <td>1 месяц</td>
+                <td style="background-color: grey"></td>
+                <td>1800р</td>
+                <td style="background-color: grey;"></td>
+                <td style="background-color: grey"></td>
+            </tr>
+            <tr>
+                <td>12 посещений</td>
+                <td>1 месяц</td>
+                <td style="background-color: grey;"></td>
+                <td>2000р</td>
+                <td style="background-color: grey;"></td>
+                <td style="background-color: grey;"></td> 
+            </tr>
+            <tr>
+                <td>Безлимит</td>
+                <td>1 месяц</td>
+                <td>1900р</td>
+                <td>2200р</td>
+                <td colspan="2">2500р</td>
+            </tr>
+            <tr>
+                <td>Безлимит</td>
+                <td>3 месяца</td>
+                <td>4200р</td>
+                <td>5500р</td>
+                <td colspan="2">6500р</td>
+            </tr>
+            <tr>
+                <td>Безлимит</td>
+                <td>6 месяцев</td>
+                <td>6500р</td>
+                <td>7900р</td>
+                <td colspan="2">8900р</td>
+            </tr>
+            <tr>
+                <td>Безлимит</td>
+                <td>12 месяцев</td>
+                <td>7990р</td>
+                <td colspan="3">10990р</td>
+            </tr>
+            <tr>
+                <td>Выходного дня</td>
+                <td>12 месяцев</td>
+                <td colspan="4">6990р</td>
+            </tr>
+            <tr>
+                <td>Старт</td>
+                <td>год + блок 10 перс. трен.</td>
+                <td colspan="2">14990р</td>
+                <td style="background-color: grey;"></td>
+                <td style="background-color: grey;"></td>
+            </tr>
+            <tr>
+                <td colspan="6"><h2>АБОНЕМЕНТ ДЛЯ ШКОЛЬНИКОВ И СТУДЕНТОВ</h2></td>
+            </tr>
+            <tr>
+                <td>Безлимит</td>
+                <td>1 месяц</td>
+                <td colspan="2">2000р</td>
+                <td style="background-color: grey;"></td>
+                <td style="background-color: grey;"></td>
+            </tr>
+            <tr>
+                <td>Безлимит</td>
+                <td>3 месяца</td>
+                <td colspan="2">4500р</td>
+                <td style="background-color: grey;"></td>
+                <td style="background-color: grey;"></td>
+            </tr>
+            <tr>
+                <td>Безлимит</td>
+                <td>6 месяцев</td>
+                <td colspan="2">6900р</td>
+                <td style="background-color: grey;"></td>
+                <td style="background-color: grey;"></td>
+            </tr>
+            <tr>
+                <td>Безлимит</td>
+                <td>12 месяцев</td>
+                <td colspan="4">9900р </td>
+            </tr>
+            <tr>
+                <td colspan="3" ><h2>Персональные тренировки</h2></td>
+                <td colspan="3"><h2>Массаж</h2></td>
+            </tr>
+            <tr>
+                <td style="background-color: grey;"></td>
+                <td>Срок действия</td>
+                <td>Стоимость</td>
+                <td colspan="2">Расслабляющий массаж</td>
+                <td>1200р</td>
+            </tr>
+            <tr>
+                <td>1 тренировка</td>
+                <td style="background-color: grey;"></td>
+                <td>700р</td>
+                <td colspan="2">Антицеллюлитный массаж</td>
+                <td>1300р</td>
+            </tr>
+            <tr>
+                <td>Блок 10 тренировок</td>
+                <td>28 дней</td>
+                <td>6000р</td>
+                <td colspan="2">Антицеллюлитный массаж по зонам брюшой полости</td>
+                <td>600р</td>
+            </tr>
+            <tr>
+                <td>Блок 20 тренировок</td>
+                <td>60 дней</td>
+                <td>10500р</td>
+                <td colspan="2">Антицеллюлитный массаж ягодиц и бедра</td>
+                <td>800р</td>
+            </tr>
+            <tr>
+                <td>Парная тренировка</td>
+                <td style="background-color: grey;"></td>
+                <td>900р</td>
+                <td colspan="2">Массаж по зонам</td>
+                <td>900р</td>
+            </tr>
+            <tr>
+                <td>Минигруппа(3 чел.)</td>
+                <td style="background-color: grey;"></td>
+                <td>1200р</td>
+                <td colspan="2">Здоровая спина</td>
+                <td>900р</td>
+            </tr>
+            <tr>
+                <td>Блок 10 парных тренировок</td>
+                <td>28 дней</td>
+                <td>8000р</td>
+                <td colspan="4"><h2>Другие услуги</h2></td>
+            </tr>
+            <tr>
+                <td>Блок 20 парных тренировок</td>
+                <td>60 дней</td>
+                <td>14000р</td>
+                <td colspan="2">Заморозка абонемента</td>
+                <td>600р</td>
+            </tr>
+            <tr>
+                <td>Минигруппа 10 тренировок</td>
+                <td>28 дней</td>
+                <td>10950р</td>
+                <td colspan="2">Восстановление карты</td>
+                <td>600р</td>
+            </tr>
+            <tr>
+                <td>Минигруппа 20 тренировок</td>
+                <td>60 дней</td>
+                <td>19980р</td>
+                <td colspan="2">Переоформление карты</td>
+                <td>600р</td>
+            </tr>
+            <tr>
+                <td colspan="6"><h2><a href="Vue.html" style="color: white;">Семейная скидка. При покупке годовых абонементов на двух членов семьи действует скидка - 20%, на троих - 30%</a> </h2></td>
+            </tr>
+        </table>
+        </div>
+        <button onclick="slideTable()">Свернуть/развернуть</button>
+        <h2><a href="Info.html" style="color: white;">Оформить абонемент</a></h2>
+        </center>
+    </body>
+</html>

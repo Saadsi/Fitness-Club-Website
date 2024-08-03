@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+    <title>О нас</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="jquery-3.6.3.min.js"></script>
+    <script>
+        function addStyle()
+        {
+            $("div:contains('CrossFit')").css("text-decoration", "underline");//фильтр контента
+            $("div[id]").css("color", "white");//фильтр атрибута
+            $("input:submit").css("background", "grey");//фильтр формы
+        }
+    </script>
+    </head>
+    <body link="#8E8D8A" vlink="#8E8D8A" alink="#8E8D8A" bgcolor="323233">
+        <h2  style="text-align: right;">
+            <a href="Index.html" style="color: white;">На главную</a>&nbsp;
+            <a href="Price.html" style="color: white; margin-right: 10px;">Цена</a>&nbsp;
+            <a href="Contacts.html" style="color: white; margin-right: 10px;">Контакты</a>&nbsp;
+            <a href="About us.html" style="color: white;">О нас</a>
+         </h2>
+        <center>
+        <div class="block">
+        <h1 style="margin-top: 150px; color: white;">Выбирая CrossFit, вы получаете лучшее для себя и своего здоровья</h1>
+        <p style="margin-top: 30px;"><h2 style="color: white;">НАДЕЖНОСТЬ И РЕПУТАЦИЯ </h2></p>
+        <h3 style="width: 800px; color: white;">
+            CrossFit – самая разветвленная сеть фитнес-клубов России: в сети более 90 клубов. С нами вы можете быть уверены в безопасности своего здоровья – дипломированный тренерский состав всегда к вашим услугам. Наши клиенты весьма разноплановые люди: профессиональные спортсмены, медийные персоны, менеджеры высшего и среднего звена, творческие личности и домохозяйки – и к каждому из них у нас индивидуальный подход, соответствующий самым требовательным запросам. Свыше 350 000 человек являются клиентами сети.
+        </h3>
+        </div>
+        <div id="txt">
+        <h2 style="color: white; margin-top: 50px;">УНИВЕРСАЛЬНОСТЬ</h2>
+        <h3 style="color: white; width: 750px;">
+            Мы предлагаем своим клиентам не только современные и уникальные для нашей страны фитнес-программы, но и возможность погрузиться в атмосферу здорового образа жизни практически любому человеку, даже не имеющему опыта тренировок. CrossFit – это сеть универсальных спортивно-оздоровительных комплексов, предлагающих весь спектр фитнес-услуг на уровне мировых стандартов:<br>
+        </h3>
+        </div>
+        </center>
+        <ul type="disc">
+        <p ><h3 style="color: white; margin-left: 650px;">
+            <li>Фитнес и разнообразные групповые занятия для взрослых и детей<br></li>
+            <a href="#">
+            <a href="#" OnMouseOver="D_D.src='iamges/fitness_2.jpg'" OnMouseOut="D_D.src='iamges/fitness.jpg'"><img id=D_D src="iamges/fitness.jpg"  width="600px" usemap="spectrs"></a>
+            <map id="spectrs" name="spectrs">
+            <area shape="rect" coords="500,500,0,0" alt="Групповые тренировки" title="Групповые тренировки" href="#" />
+            </a>
+            <li>Салоны красоты & spa<br></li>
+            <a href="#" OnMouseOver="C_C.src='iamges/spa_2.jpg'" OnMouseOut="C_C.src='iamges/spa.jpg'"><img id=C_C src="iamges/spa.jpg"  width="600px"></a>
+            <li>Сауны и парные<br></li>
+            <a href="#" OnMouseOver="A_A.src='iamges/sauna_2.jpg'" OnMouseOut="A_A.src='iamges/sauna.jpg'"><img id=A_A src="iamges/sauna.jpg"  width="600px"></a>
+            <li>бассейны с морской водой.<br></li>
+            <a href="#" OnMouseOver="B_B.src='iamges/Pool_2.jpg'" OnMouseOut="B_B.src='iamges/Pool.jpg'"><img id=B_B src="iamges/Pool.jpg"  width="600px"></a>
+        </ul>
+        </h3></p>
+        <center>
+            <h2 style="color: white; margin-top: 60px;">
+                ОБОРУДОВАНИЕ
+            </h2>
+            <p>
+            <h3 style="color: white; width: 799px">
+                Сеть фитнес-клубов CrossFit с момента основания уделяет большое внимание качеству, эффективности, удобству и безопасности тренажеров. В наших залах устанавливается оборудование ведущих мировых брендов. Среди них Life Fitness – крупнейший в мире производитель премиального фитнес-оборудования; легендарные тренажеры Hammer Strength — бренд №1 в мире среди силовых тренажеров со свободными весами.
+                Современное оборудование помогает добиться впечатляющих результатов клиентам клубов CrossFit!
+            </h3>
+        </p>
+        <input type="submit" onclick="addStyle()" value="Изменить вид"></input>
+        </center>
+    </body>
+
+</html>

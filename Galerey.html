@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>Наша галерея</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"></script>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body style="overflow-x: hidden; color: white; background-color: #323233;">
+   <h2 style="text-align: center;">Наша Галерея</h2>
+    <div id="slider" class="owl-carousel">
+        <a href="#link">
+            <div class="owl-pic">
+                <img src="iamges/fitness.jpg" alt="" />
+            </div>
+        </a>        
+        <a href="#link">
+            <div class="owl-pic">
+                <img src="iamges/fitness_2.jpg" alt="" />
+            </div>
+        </a>  
+        <a href="#link">
+            <div class="owl-pic">
+                <img src="iamges/spa.jpg" alt="" />
+            </div>
+        </a>  
+        <a href="#link">
+            <div class="owl-pic">
+                <img src="iamges/sauna.jpg" alt="" />
+            </div>
+        </a>  
+        <a href="#link">
+            <div class="owl-pic">
+                <img src="iamges/pool.jpg" alt="" />
+            </div>
+        </a> 
+        <a href="#link">
+            <div class="owl-pic">
+                <img src="iamges/pool_2.jpg" alt="" />
+            </div>
+        </a> 
+      </div>
+      <script>
+        $("#slider").owlCarousel({
+            nav: true,
+            navText: [
+                '<i class="fas fa-chevron-circle-left"></i>Назад',
+                'Вперёд<i class="fas fa-chevron-circle-right"></i>'
+            ]
+        });
+      </script>
+</body>
+</html>
